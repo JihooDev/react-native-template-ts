@@ -7,8 +7,9 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { BottomNavigationParams, StackNavigationParams } from '../types/types'
 
 type HomeScreenProps = NativeStackScreenProps<BottomNavigationParams, "Home">
+// type HomeScreenProps = NativeStackScreenProps<BottomNavigationParams, "Home">
 
-const Home = ({ navigation }: HomeScreenProps) => {
+const Home = ({ navigation, route }: HomeScreenProps) => {
 
     return (
         <CustomSafeAreaView backColor={COLORS.white}>
