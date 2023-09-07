@@ -5,16 +5,20 @@ import Home from './page/Home';
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
 import BottomNavigation from './navigator/BottomNavigation';
+import { RecoilRoot } from 'recoil';
+import { StackNavigationParams } from './types/types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<StackNavigationParams>();
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='BottomTab' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name='BottomTab' component={BottomNavigation} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <RecoilRoot>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName='BottomTab' screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='BottomTab' component={BottomNavigation} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </RecoilRoot>
   )
 }
 
