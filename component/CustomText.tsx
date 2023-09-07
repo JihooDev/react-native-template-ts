@@ -5,14 +5,14 @@ import { font } from '../responsive/responsive'
 
 interface Props {
     text: string,
-    type: "Black" | "Bold" | "ExtraBold" | "ExtraLight" | "Light" | "Medium" | "Regular" | "SemiBold" | "Thin",
-    color: string,
-    size: number
+    type?: "Black" | "Bold" | "ExtraBold" | "ExtraLight" | "Light" | "Medium" | "Regular" | "SemiBold" | "Thin",
+    color?: string,
+    size?: number
 }
 
 const CustomText = ({
     text,
-    type,
+    type = 'Medium',
     color = COLORS.black,
     size = 15
 }: Props) => {
