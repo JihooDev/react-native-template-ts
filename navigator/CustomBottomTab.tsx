@@ -7,11 +7,6 @@ import { Image } from 'react-native'
 import CustomText from '../component/CustomText'
 
 const CustomBottomTab = ({ state, navigation, descriptors }: any): JSX.Element => {
-
-    useEffect(() => {
-        console.log(state);
-    }, [])
-
     return (
         <BottomBox>
             <BottomContainer
